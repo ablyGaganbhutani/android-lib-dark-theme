@@ -1,4 +1,4 @@
-package com.example.darklighttheme
+package com.ablySoft.darklighttheme
 
 import org.junit.Test
 
