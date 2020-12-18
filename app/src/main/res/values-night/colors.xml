@@ -7,8 +7,8 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorSurface">#000000</color>
     <color name="colorOnSurface">#ffffff</color>
-    <color name="colorText">#ffffff</color>
+    <color name="colorText">#3E364D</color>
+    <color name="colorBlack">#000000</color>
     <color name="colorBlack_60">#99000000</color>
     <color name="colorText_60">#993E364D</color>
-
 </resources>

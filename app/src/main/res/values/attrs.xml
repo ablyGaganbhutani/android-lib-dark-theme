@@ -7,4 +7,7 @@
     <declare-styleable name="DarkThemeImageView">
         <attr name="drawableTint" format="color"/>
     </declare-styleable>
+
+    <attr name="colorOnSurface" format="reference"/>
+    <attr name="colorSurface" format="reference"/>
 </resources>

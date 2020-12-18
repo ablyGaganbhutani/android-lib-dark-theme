@@ -5,8 +5,10 @@
     <color name="colorAccent">#FF6433</color>
 
     <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
     <color name="colorSurface">#ffffff</color>
-    <color name="colorOnSurface">#ffffff</color>
+    <color name="colorOnSurface">#3E364D</color>
     <color name="colorBlack_60">#99000000</color>
     <color name="colorText">#3E364D</color>
     <color name="colorText_60">#993E364D</color>

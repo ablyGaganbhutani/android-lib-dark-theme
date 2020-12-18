@@ -1,4 +1,4 @@
-package com.ablySoft.darklighttheme.utils
+package com.ablySoft.darklighttheme.custom
 
 import android.content.Context
 import android.util.AttributeSet

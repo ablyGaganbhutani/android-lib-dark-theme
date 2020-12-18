@@ -1,4 +1,4 @@
-package com.ablySoft.darklighttheme.utils
+package com.ablySoft.darklighttheme.custom
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -19,7 +19,8 @@ class DarkThemeImageView @JvmOverloads constructor(
         private const val DRAWABLE_TINT_COLOR = 0
     }
 
-    private var drawableTintColor = DRAWABLE_TINT_COLOR
+    private var drawableTintColor =
+        DRAWABLE_TINT_COLOR
 
     init {
         val typedArray = context.obtainStyledAttributes(attr, R.styleable.DarkThemeImageView)
