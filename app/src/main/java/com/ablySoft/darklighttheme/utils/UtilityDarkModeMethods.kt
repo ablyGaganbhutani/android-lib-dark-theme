@@ -34,7 +34,7 @@ abstract class UtilityDarkModeMethods {
         }
     }
 
-    fun Context.changeViewBackgroundColor(vararg view: View){
+    fun Context.changeViewBackgroundColor(vararg view: View) {
         val value = TypedValue()
         this.theme.resolveAttribute(R.attr.colorOnSurface, value, true)
         val color = value.data
