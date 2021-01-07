@@ -16,15 +16,43 @@ buildscript {
     }
 }
 
+
+
 allprojects {
     repositories {
         jcenter()
         google()
-        maven {
-            url 'https://maven.google.com'
-        }
     }
 }
+
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+//bintray {
+//    user = 'gaganbhutani'
+//    key = 'fbc91f0481830559c45a9a110c3022d34330d28c'
+//
+//    configurations = ['archives']
+//    pkg {
+//        repo = 'DarkLightTheme'
+//        name = 'com.ablySoft.darklighttheme'
+//        desc = 'DarkTheme project library description' // description of library
+//        websiteUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git'    // git repo url
+//        vcsUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git' // git repo vcs url
+//        licenses = ['Apache-2.0']  // for example, The Apache Software License, Version 2.0
+//        publish = true
+//        publicDownloadNumbers = true
+//        version {
+//            desc = 'libraryDescription'
+//            // Uncomment 4 lines below to enable gpg auto signing
+//            //gpg {
+//            //    sign = true //Determines whether to GPG sign the files. The default is false
+//            //    passphrase = properties.getProperty("bintray.gpg.password")
+//            //}
+//        }
+//    }
+//}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

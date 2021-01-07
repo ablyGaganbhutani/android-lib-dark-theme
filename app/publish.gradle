@@ -1,8 +1,10 @@
+// file rootDir/yourlibrary/publish.gradle
+
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = publishedGroupId    // Maven Group ID for the artifact
 version = libraryVersion
+group = publishedGroupId    // Maven Group ID for the artifact
 
 install {
     repositories.mavenInstaller {
