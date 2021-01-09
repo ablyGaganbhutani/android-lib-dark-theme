@@ -21,5 +21,5 @@ Step 2: Add the below dependency:-
 	<dependency>
 	    <groupId>com.github.ablyGaganbhutani</groupId>
 	    <artifactId>android-lib-dark-theme</artifactId>
-	    <version>Tag</version>
+	    <version>1.0.0</version>
 	</dependency>
