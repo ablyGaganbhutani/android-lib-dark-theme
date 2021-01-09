@@ -12,15 +12,15 @@ ext {
     bintrayName = 'com.ablySoft.darklighttheme' // package name of the bintray repo
 
     publishedGroupId = 'com.ablySoft.darklighttheme'   // this is the ID we want to see in implementation line
-    libraryName = '1.0'     // this is the module name of library
-    artifact = 'darkLightTheme'        // this is the artifact we want to see in implementation line
+    libraryName = 'DarkLightTheme'     // this is the module name of library
+    artifact = 'DarkLightTheme'        // this is the artifact we want to see in implementation line
 
     libraryDescription = 'DarkTheme project library description' // description of library
 
     siteUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git'    // git repo url
     gitUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git' // git repo vcs url
 
-    libraryVersion = appVersionName     // library version
+    libraryVersion = '1.0.2'     // library version
 
     developerId = 'gaganbhutani'                // This is your bintray username
     developerName = 'Gagandeep Bhutani'              // Developer's name
@@ -29,6 +29,12 @@ ext {
     licenseName = 'The Apache Software License, Version 2.0'  // for example, The Apache Software License, Version 2.0
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'   // for example, http://www.apache.org/licenses/LICENSE-2.0.txt
     allLicenses = ["Apache-2.0"]
+}
+
+bintray {
+    pkg {
+        userOrg = 'ably'
+    }
 }
 
 android {
@@ -70,7 +76,12 @@ dependencies {
 }
 
 apply plugin: 'com.github.dcendents.android-maven'
-apply from: 'publish.gradle'
+//apply from: 'publish.gradle'
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+}
 
 //group = publishedGroupId // Maven Group ID for the artifact
 //

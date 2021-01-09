@@ -4,10 +4,9 @@ import android.content.Context
 import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
-import androidx.core.content.ContextCompat
 import com.ablySoft.darklighttheme.R
 
-abstract class UtilityDarkModeMethods {
+interface UtilityDarkModeMethods {
 
     fun changeDarkTextViewColor(color: Int, vararg view: View) {}
 
