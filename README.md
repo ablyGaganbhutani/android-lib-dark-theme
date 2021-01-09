@@ -4,8 +4,21 @@ Read me file
 How to use:-
 
 # for gradle:-
-com.github.ablyGaganbhutani:android-lib-dark-theme:1.0.0
 
+Step 1-> Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+Step 2-> Add it in your app level build.gradle file
+
+	dependencies {
+	        implementation 'com.github.ablyGaganbhutani:android-lib-dark-theme:Tag'
+	}
 
 # for maven:-
 
