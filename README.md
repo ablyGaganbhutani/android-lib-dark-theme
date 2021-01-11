@@ -35,3 +35,25 @@ Step 2: Add the below dependency:-
 	    <artifactId>android-lib-dark-theme</artifactId>
 	    <version>1.0.0</version>
 	</dependency>
+	
+	
+# How to use:-
+
+General usage:-  
+-> View.setSelectedIfDarkTheme() method of library to get whether dark mode is enabled or not
+-> getIsDarkModeEnabled() method of library to get the value of status of dark mode from preference.  
+
+->  View.setOnClickListener {
+            DarkTheme.apply(this, enabled = it.isSelected.not())
+            restartApp(this)
+            it.setSelectedIfDarkTheme()
+        }
+
+Use above code to switch between dark and light modes
+
+Implement the interface UtilityDarkModeMethods to customise the below properties:-
+
+-> color of TextView
+-> color of DrawableTint
+-> background color of any view
+
