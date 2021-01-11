@@ -46,8 +46,12 @@ Add below line in application class:-
 
 
 General usage:-  
--> View.setSelectedIfDarkTheme() method of library to get whether dark mode is enabled or not
--> getIsDarkModeEnabled() method of library to get the value of status of dark mode from preference.  
+
+	// method of library to get whether dark mode is enabled or not
+		-> View.setSelectedIfDarkTheme() 
+	
+	// method of library to get the value of status of dark mode from preference.  
+		-> getIsDarkModeEnabled() 
 
 	// to apply the dark mode on click of view
 	 someView.setOnClickListener {
