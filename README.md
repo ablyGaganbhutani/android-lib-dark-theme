@@ -50,7 +50,7 @@ General usage:-
 -> getIsDarkModeEnabled() method of library to get the value of status of dark mode from preference.  
 
 	// to apply the dark mode on click of view
-	 binding.layoutExpanded.switchDarkTheme.setOnClickListener {
+	 someView.setOnClickListener {
             if (this.isEnabled()) {
                 DarkTheme.apply(DarkModeEnum.off)
                 this.launchActivity<DashboardActivity> { }
