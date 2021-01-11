@@ -4,12 +4,12 @@ import android.content.Context
 import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import com.ablySoft.darklighttheme.R
 
 interface UtilityDarkModeMethods {
 
-    fun changeDarkTextViewColor(color: Int, vararg view: View) {}
-
+    fun changeDarkTextViewColor(color: Int, vararg view: TextView) {}
 
     // to change the tint color of image drawable with colorOnSurface given in colors files
     fun Context.changeDarkDrawableTintColor(

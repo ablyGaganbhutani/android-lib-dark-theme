@@ -3,18 +3,24 @@ package com.ablySoft.darklighttheme.utils
 import android.content.Context
 import android.content.Intent
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 
-fun View.setSelectedIfDarkTheme() {
-    isSelected = DarkTheme.isEnabled(context)
-//    PreferenceManager.get().save(PreferenceManager.PREF_DARK_MODE, isSelected)
+fun getDarkModeValue(): Int {
+    return PreferenceManager.get().getInt(PreferenceManager.PREF_DARK_MODE, defValue = 1)
 }
 
-fun getIsDarkModeEnabled(): Boolean {
-    return PreferenceManager.get().getBoolean(PreferenceManager.PREF_DARK_MODE, defValue = false)
-}
-
-fun Context.restartApp(className: Any) {
-    val intent = Intent(this, className::class.java)
+fun setSelectedDarkModelValue() {
+    when (getDarkModeValue()) {
+        AppCompatDelegate.MODE_NIGHT_NO -> {
+            DarkTheme.apply(DarkModeEnum.off)
+        }
+        AppCompatDelegate.MODE_NIGHT_YES -> {
+            DarkTheme.apply(DarkModeEnum.on)
+        }
+        AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> {
+            DarkTheme.apply(DarkModeEnum.followSystem)
+        }
+    }
 }
 
 inline fun <reified T : Any> Context.launchActivity(noinline init: Intent.() -> Unit = {}) {

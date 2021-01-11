@@ -35,12 +35,15 @@ class PreferenceManager private constructor(context: Context) {
         preferences = context.getSharedPreferences(sharedPrefName, Context.MODE_PRIVATE)
     }
 
-    fun save(@PrefKey key: String, value: Boolean) {
-        preferences.edit().putBoolean(key, value).apply()
+    fun save(@PrefKey key: String, value: Int) {
+        preferences.edit().putInt(key, value).apply()
     }
 
     fun getBoolean(@PrefKey key: String, defValue: Boolean): Boolean =
         preferences.getBoolean(key, defValue)
+
+    fun getInt(@PrefKey key: String, defValue: Int): Int =
+        preferences.getInt(key, defValue)
 
     fun <T> getObject(@PrefKey key: String, objectClass: Class<T>): T? {
         val jsonString = preferences.getString(key, null)

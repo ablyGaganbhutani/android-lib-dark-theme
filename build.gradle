@@ -8,15 +8,11 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4"
-        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
-
-
 
 allprojects {
     repositories {
@@ -26,35 +22,6 @@ allprojects {
 
     }
 }
-
-//Properties properties = new Properties()
-//properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-//bintray {
-//    user = 'gaganbhutani'
-//    key = 'fbc91f0481830559c45a9a110c3022d34330d28c'
-//
-//    configurations = ['archives']
-//    pkg {
-//        repo = 'DarkLightTheme'
-//        name = 'com.ablySoft.darklighttheme'
-//        desc = 'DarkTheme project library description' // description of library
-//        websiteUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git'    // git repo url
-//        vcsUrl = 'https://github.com/ablyGaganbhutani/android-lib-dark-theme.git' // git repo vcs url
-//        licenses = ['Apache-2.0']  // for example, The Apache Software License, Version 2.0
-//        publish = true
-//        publicDownloadNumbers = true
-//        version {
-//            desc = 'libraryDescription'
-//            // Uncomment 4 lines below to enable gpg auto signing
-//            //gpg {
-//            //    sign = true //Determines whether to GPG sign the files. The default is false
-//            //    passphrase = properties.getProperty("bintray.gpg.password")
-//            //}
-//        }
-//    }
-//}
-
 
 task clean(type: Delete) {
     delete rootProject.buildDir
