@@ -49,10 +49,15 @@ General usage:-
 -> View.setSelectedIfDarkTheme() method of library to get whether dark mode is enabled or not
 -> getIsDarkModeEnabled() method of library to get the value of status of dark mode from preference.  
 
-->  View.setOnClickListener {
-            DarkTheme.apply(this, enabled = it.isSelected.not())
-            restartApp(this)
-            it.setSelectedIfDarkTheme()
+	// to apply the dark mode on click of view
+	 binding.layoutExpanded.switchDarkTheme.setOnClickListener {
+            if (this.isEnabled()) {
+                DarkTheme.apply(DarkModeEnum.off)
+                this.launchActivity<DashboardActivity> { }
+            } else {
+                DarkTheme.apply(DarkModeEnum.on)
+                this.launchActivity<DashboardActivity> { }
+            }
         }
 
 Use above code to switch between dark and light modes
