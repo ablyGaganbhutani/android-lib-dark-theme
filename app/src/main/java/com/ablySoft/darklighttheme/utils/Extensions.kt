@@ -2,11 +2,10 @@ package com.ablySoft.darklighttheme.utils
 
 import android.content.Context
 import android.content.Intent
-import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 
 fun getDarkModeValue(): Int {
-    return PreferenceManager.get().getInt(PreferenceManager.PREF_DARK_MODE, defValue = 1)
+    return AblyPreferenceManager.get().getInt(AblyPreferenceManager.PREF_DARK_MODE, defValue = 1)
 }
 
 fun setSelectedDarkModelValue() {

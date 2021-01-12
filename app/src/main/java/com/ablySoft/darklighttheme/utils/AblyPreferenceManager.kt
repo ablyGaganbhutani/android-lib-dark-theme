@@ -6,7 +6,7 @@ import androidx.annotation.StringDef
 import com.google.gson.Gson
 import java.util.concurrent.atomic.AtomicBoolean
 
-class PreferenceManager private constructor(context: Context) {
+class AblyPreferenceManager private constructor(context: Context) {
     private val sharedPrefName = "darkMode"
     private val gson = Gson()
     private var preferences: SharedPreferences
@@ -18,17 +18,17 @@ class PreferenceManager private constructor(context: Context) {
         @Retention(AnnotationRetention.SOURCE)
         annotation class PrefKey
 
-        private lateinit var instance: PreferenceManager
+        private lateinit var instance: AblyPreferenceManager
         private val isInitialized =
             AtomicBoolean()     // To check if instance was previously initialized or not
 
         fun initialize(context: Context) {
             if (!isInitialized.getAndSet(true)) {
-                instance = PreferenceManager(context.applicationContext)
+                instance = AblyPreferenceManager(context.applicationContext)
             }
         }
 
-        fun get(): PreferenceManager = instance
+        fun get(): AblyPreferenceManager = instance
     }
 
     init {

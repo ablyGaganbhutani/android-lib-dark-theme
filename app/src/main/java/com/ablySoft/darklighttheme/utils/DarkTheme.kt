@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
-import com.ablySoft.darklighttheme.R
 
 object DarkTheme {
 
@@ -26,7 +25,7 @@ object DarkTheme {
         }
 
         AppCompatDelegate.setDefaultNightMode(nightMode)
-        PreferenceManager.get().save(PreferenceManager.PREF_DARK_MODE, nightMode)
+        AblyPreferenceManager.get().save(AblyPreferenceManager.PREF_DARK_MODE, nightMode)
     }
 
     fun Context.isEnabled(): Boolean {
