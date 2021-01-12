@@ -40,6 +40,11 @@ Step 2: Add the below dependency:-
 # How to use:-
 
 Add below line in application class:-
+
+	// to initialise preference
+	
+	AblyPreferenceManager.initialize(ctx)
+	
 	// to fetch the dark theme value from shared preference
 	
          setSelectedDarkModelValue()
